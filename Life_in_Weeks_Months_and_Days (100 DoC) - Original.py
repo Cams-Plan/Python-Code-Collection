@@ -10,7 +10,7 @@
 # weeks_til_ninty = 52 * years_til_ninty
 # days_til_ninty = 365 * years_til_ninty
 
-# print(f'You have {days_til_ninty} days, {weeks_til_ninty} weeks, and {months_til_ninty} months left.')
+# print(f"You have {days_til_ninty} days, {weeks_til_ninty} weeks, and {months_til_ninty} months left.")
 
 
 
@@ -23,4 +23,4 @@ months_til_ninty = 12 * years_til_ninty
 weeks_til_ninty = 52 * years_til_ninty
 days_til_ninty = 365 * years_til_ninty
 
-print(f'You have {days_til_ninty} days, {weeks_til_ninty} weeks, and {months_til_ninty} months left.')
+print(f"You have {days_til_ninty} days, {weeks_til_ninty} weeks, and {months_til_ninty} months left.")
