@@ -7,8 +7,8 @@
 # #Write your code below this line 👇
 # weight = float(weight)
 # height = float(height)
-# bmi = weight / (height ** 2 * (height ** 2))
-# print(round(bmi,2))
+# bmi = weight / (height ** 2)
+# print(int(bmi))
 
 ### SHORT CODE ###
 
@@ -19,5 +19,5 @@ weight = input("enter your weight in kg: ")
 weight = float(weight)
 height = float(height)
 # Calculation
-bmi = weight / (height ** 2 * (height ** 2))
-print(round(bmi,2))
+bmi = weight / (height ** 2)
+print(int(bmi))
