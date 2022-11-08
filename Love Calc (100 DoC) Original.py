@@ -21,7 +21,7 @@ lovecalc = tc + lc
 # Return the calculations with range-based score statements
 if int(lovecalc) < 10 or int(lovecalc) > 90:
     print(f"Your score is {lovecalc}, you go together like coke and mentos.")
-elif int(lovecalc) > 40 and int(lovecalc) < 50:
+elif int(lovecalc) >= 40 and int(lovecalc) <= 50:
     print(f"Your score is {lovecalc}, you are alright together.")
 else:
     print(f"your score is {lovecalc}")
@@ -54,7 +54,7 @@ lovecalc = tc + lc
 
 if int(lovecalc) < 10 or int(lovecalc) > 90:
     print(f"Your score is {lovecalc}, you go together like coke and mentos.")
-elif int(lovecalc) > 40 and int(lovecalc) < 50:
+elif int(lovecalc) >= 40 and int(lovecalc) <= 50:
     print(f"Your score is {lovecalc}, you are alright together.")
 else:
     print(f"your score is {lovecalc}")
