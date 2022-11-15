@@ -1,0 +1,8 @@
+When to use for loops:
+  If you need to manipulate every subject item that you're interating through
+  If the condition subject can be predicted
+  If the item or index of iteration is important to the programme
+
+When to use While loops:
+  If a sequence needs to be repeated until a condition is met
+  If every item specified in the condition statement don't need direct repetitive manipulation
