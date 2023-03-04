@@ -47,3 +47,9 @@ print(game_stats["shots made][1])
 
 # retrieving items from dictionaries nested within a dictionary-nested list - if a dictionary nested in a list has multiple key:items, you can call on the key next
 print(game_stats2["shots taken"]["shots made"][0]
+
+      
+    #Using the Random Module with dictionaries
+# random.choice() using: print(random.choice(list(dictionary)))
+import random
+      print(random.choice(list(variable)))
