@@ -2,7 +2,8 @@
 
 
 def is_leap(year):
-    #calculate whether the input (year) is a leap year across 3 checks
+    """calculate whether the input (year) is a leap year across 3 checks:
+    divisible by 4, divisible by 100, divisible by 400"""
     if year % 4 == 0:
       if year % 100 == 0:
         if year % 400 == 0:
@@ -15,7 +16,7 @@ def is_leap(year):
       return(False)
 
 def days_in_month(year_input, month_input):
-    #considers leap year to calculate days in a chosen month of a chosen year
+    """considers leap year to calculate days in a chosen month of a chosen year"""
     year_rtn = is_leap(year)
     if year_rtn == True:
         month_days_leap = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
