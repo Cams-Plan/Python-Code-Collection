@@ -8,7 +8,6 @@ heading_ascii_2 = """
 / /\  /| |_| | | | | | | |_) |  __/ |    / ___/\__ \ |_| | (__| | | | | (__ 
 \_\ \/  \__,_|_| |_| |_|_.__/ \___|_|    \/    |___/\__, |\___|_| |_|_|\___|
                                                     |___/
-
 WELCOME TO NUMBER PSYCHIC!                   
 """
 
@@ -24,9 +23,11 @@ def easy_mode():
         print(f"You have {attempts_easy} attempts remaining to guess the number")
         guess = int(input("Make a guess: "))
         if guess == SECRET_NUMBER:
-            print(f"Great Job! You Are Correct!\nThe secret number was {SECRET_NUMBER}")
-            print(f"You guessed the correct number with {attempts_easy} attempt(s) remaining")
-            play_again = input("Would you like to play again? y/n? ")
+            print(" _________________________________________________________________" +
+            "\n|                   Great Job! You Are Correct!                   |" +
+            f"\n    -The SECRET NUMBER was {SECRET_NUMBER}")
+            print(f"    -You guessed the correct number with {attempts_easy} attempt(s) remaining")
+            play_again = input("\n Would you like to play again? y/n? ")
             if play_again == "y":
                 print("let's play")
             else:
@@ -43,27 +44,28 @@ def easy_mode():
         else:
             print("That's too low.\nGuess again.")
             attempts_easy -= 1
-
-    print("You ran out of attempts.\nYou lose.")
-    print(f"The secret number was {SECRET_NUMBER}.")
-    play_again = input("Would you like to play again? y/n? ")
-    if play_again == "y":
-        number_psychic_game()
-    else:
-        print("Thank you for playing.")
-        break
+    if attempts_easy == 0:
+        print(" _______________________________\n|    You ran out of attempts.   |\n            You lose.")
+        print(f"    -The SECRET NUMBER was {SECRET_NUMBER}.")
+        play_again = input("\nWould you like to play again? y/n? ")
+        if play_again == "y":
+            number_psychic_game()
+        else:
+            print("Thank you for playing.")
 
 def hard_mode():
     global SECRET_NUMBER
-    attempts_easy = 5
+    attempts_hard = 5
     print(SECRET_NUMBER)
-    while attempts_easy != 0:
-        print(f"You have {attempts_easy} attempts remaining to guess the number")
+    while attempts_hard != 0:
+        print(f"You have {attempts_hard} attempts remaining to guess the number")
         guess = int(input("Make a guess: "))
         if guess == SECRET_NUMBER:
-            print(f"Great Job! You Are Correct!\nThe secret number was {SECRET_NUMBER}")
-            print(f"You guessed the correct number with {attempts_easy} attempt(s) remaining")
-            play_again = input("Would you like to play again? y/n? ")
+            print(" _________________________________________________________________" +
+            "\n|                   Great Job! You Are Correct!                   |" +
+            f"\n    -The SECRET NUMBER was {SECRET_NUMBER}")
+            print(f"    -You guessed the correct number with {attempts_hard} attempt(s) remaining")
+            play_again = input("\nWould you like to play again? y/n? ")
             if play_again == "y":
                 number_psychic_game()
             else:
@@ -74,21 +76,20 @@ def hard_mode():
 
         elif guess > SECRET_NUMBER:
             print("That's too high.\nGuess again.")
-            attempts_easy -= 1
-            print(attempts_easy)
+            attempts_hard -= 1
+            print(attempts_hard)
 
         else:
             print("That's too low.\nGuess again.")
-            attempts_easy -= 1
-
-    print("You ran out of attempts.\nYou lose.")
-    print(f"The secret number was {SECRET_NUMBER}.")
-    play_again = input("Would you like to play again? y/n? ")
-    if play_again == "y":
-        print("let's play")
-    else:
-        print("Thank you for playing.")
-        break
+            attempts_hard -= 1
+    if attempts_hard == 0:
+        print(" _______________________________\n|    You ran out of attempts.   |\n            You lose.")
+        print(f"    -The SECRET NUMBER was {SECRET_NUMBER}.")
+        play_again = input("\nWould you like to play again? y/n? ")
+        if play_again == "y":
+            print("let's play")
+        else:
+            print("Thank you for playing.")
 
 def number_psychic_game():
     print(heading_ascii_2, "\nI'm thinking of a number for 1-100")
@@ -100,3 +101,5 @@ def number_psychic_game():
     else:
         print("Please choose 'easy' or 'hard'. ")
         number_psychic_game()
+
+number_psychic_game()
