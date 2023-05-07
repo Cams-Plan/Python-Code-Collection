@@ -18,16 +18,17 @@ SECRET_NUMBER = random.choice(numbers_list)
 def easy_mode():
     global SECRET_NUMBER
     attempts_easy = 10
-    print(SECRET_NUMBER)
     while attempts_easy != 0:
         print(f"You have {attempts_easy} attempts remaining to guess the number")
         guess = int(input("Make a guess: "))
+     
         if guess == SECRET_NUMBER:
             print(" _________________________________________________________________" +
             "\n|                   Great Job! You Are Correct!                   |" +
             f"\n    -The SECRET NUMBER was {SECRET_NUMBER}")
             print(f"    -You guessed the correct number with {attempts_easy} attempt(s) remaining")
             play_again = input("\n Would you like to play again? y/n? ")
+          
             if play_again == "y":
                 print("let's play")
             else:
@@ -44,10 +45,12 @@ def easy_mode():
         else:
             print("That's too low.\nGuess again.")
             attempts_easy -= 1
+          
     if attempts_easy == 0:
         print(" _______________________________\n|    You ran out of attempts.   |\n            You lose.")
         print(f"    -The SECRET NUMBER was {SECRET_NUMBER}.")
         play_again = input("\nWould you like to play again? y/n? ")
+          
         if play_again == "y":
             number_psychic_game()
         else:
@@ -56,7 +59,6 @@ def easy_mode():
 def hard_mode():
     global SECRET_NUMBER
     attempts_hard = 5
-    print(SECRET_NUMBER)
     while attempts_hard != 0:
         print(f"You have {attempts_hard} attempts remaining to guess the number")
         guess = int(input("Make a guess: "))
@@ -66,6 +68,7 @@ def hard_mode():
             f"\n    -The SECRET NUMBER was {SECRET_NUMBER}")
             print(f"    -You guessed the correct number with {attempts_hard} attempt(s) remaining")
             play_again = input("\nWould you like to play again? y/n? ")
+          
             if play_again == "y":
                 number_psychic_game()
             else:
@@ -86,6 +89,7 @@ def hard_mode():
         print(" _______________________________\n|    You ran out of attempts.   |\n            You lose.")
         print(f"    -The SECRET NUMBER was {SECRET_NUMBER}.")
         play_again = input("\nWould you like to play again? y/n? ")
+          
         if play_again == "y":
             print("let's play")
         else:
