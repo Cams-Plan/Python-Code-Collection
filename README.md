@@ -1,4 +1,4 @@
-# Python-Scripts
+# 100 Days of Code Python Collection
 Scripts from the Udemy 100 days of code course. 
 
 ## Description
