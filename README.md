@@ -1,7 +1,5 @@
 # 100 Days of Code Python Collection
 
-![DaysOfCodeThumbnail](https://github.com/Cams-Plan/Python-Code-Collection/assets/110306796/8d7b777c-232c-44cd-8385-3d4efc736af8)
-
 Scripts from the Udemy 100 days of code course. 
 
 ## Description
